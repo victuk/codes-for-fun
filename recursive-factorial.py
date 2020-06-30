@@ -1,8 +1,12 @@
 #!/usr/bin/python3
+import sys
 
 print("Input number lemme run the factorial for you sharp sharp :)")
 
-factNum = int(input())
+if len(sys.argv) <= 1:
+    factNum = int(input())
+else:    
+    factNum = int(sys.argv[1])
 
 def factorial(n):
     if (n <= 1):
